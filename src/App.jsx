@@ -65,22 +65,20 @@ const App = () => {
 
       {/* Fixed bottom navigation */}
       <nav className="fixed bottom-0 left-0 w-full border-t bg-white shadow z-50 fixed-bottom-nav">
-        <div className="flex">
-          {navItems.map((item) => (
-            <button
-              key={item.key}
-              onClick={() => setPage(item.key)}
-              className={`menuitems flex-1 py-4 text-base md:text-lg transition-colors ${
-                page === item.key
-                  ? 'text-purple-700 font-bold bg-purple-50'
-                  : 'text-gray-500 hover:bg-gray-100'
-              }`}
-              aria-current={page === item.key ? 'page' : undefined}
-            >
-              {item.label}
-            </button>
-          ))}
-        </div>
+        {navItems.map((item) => (
+          <button
+            key={item.key}
+            onClick={() => setPage(item.key)}
+            className={`menuitems flex-1 py-4 text-base md:text-lg transition-colors ${
+              page === item.key
+                ? 'text-purple-700 font-bold bg-purple-50'
+                : 'text-gray-500 hover:bg-gray-100'
+            }`}
+            aria-current={page === item.key ? 'page' : undefined}
+          >
+            {item.label}
+          </button>
+        ))}
       </nav>
     </div>
   );
@@ -250,7 +248,7 @@ const Schedule = () => (
         <li><strong>Weekends:</strong> All wineries are open Saturday and Sunday, usually starting around 11 AM and closing by 6–9 PM.</li>
         <li><strong>Evening Availability:</strong> Only a couple of wineries stay open past 6 PM (e.g., Aquila's Nest is open until 9 PM on weekends).</li>
         <li><strong>Early mornings:</strong> No winery opens before 11 AM, so 3 AM or early morning plans won't work.</li>
-        <li><strong>Group visits:</strong> We do not need reservations for any of the stops included.</li>
+        <li><strong>Group visits:</strong> We do not need reservations for any of the stops included, but they are recommended for Aquila's Nest, so I will make sure we have one there just in case!</li>
       </ul>
       <p className="mt-3">So, we should aim for a full weekend day (Saturday or Sunday), starting around 11 AM and wrapping up before 9 PM. Let me know which weekends you're available within that window!</p>
     </div>
