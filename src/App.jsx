@@ -97,6 +97,7 @@ const WINERIES = [
       "Hours: Mon–Thu 12–6 PM, Fri–Sat 12–8 PM, Sun 12–6 PM; no reservations needed for small groups."
     ],
     image: hawkRidgeImg,
+    link: "https://www.hawkridgewinery.net/",
   },
   {
     name: "Sunset Meadow Vineyards",
@@ -109,6 +110,7 @@ const WINERIES = [
       "Hours: Thu–Fri 11 AM–5 PM, Sat 11 AM–6 PM, Sun 11 AM–5 PM; closed Tues/Wed; walk-ins welcome."
     ],
     image: sunsetMeadowImg,
+    link: "https://sunsetmeadowvineyards.com/",
   },
   {
     name: "Hopkins Vineyard",
@@ -121,6 +123,7 @@ const WINERIES = [
       "Hours: Mon–Fri 11 AM–5 PM, Sat 11 AM–7 PM, Sun 11 AM–6 PM; no reservations required for groups under 10."
     ],
     image: hopkinsImg,
+    link: "https://www.hopkinsvineyard.com/",
   },
   {
     name: "White Silo Farm & Winery",
@@ -133,6 +136,7 @@ const WINERIES = [
       "Hours: Fri–Sun 11 AM–6 PM; reservations not required."
     ],
     image: whiteSiloImg,
+    link: "https://whitesilowinery.com/",
   },
   {
     name: "Aquila's Nest Vineyards",
@@ -145,6 +149,7 @@ const WINERIES = [
       "Hours: Wed 6–9 PM, Thu 4–9 PM, Fri 1–9 PM, Sat–Sun 11:30 AM–9 PM; reservations strongly recommended."
     ],
     image: aquilasNestImg,
+    link: "https://www.aquilasnestvineyards.com/",
   },
 ];
 
@@ -202,6 +207,9 @@ const Locations = () => {
         <div className="winery-card-overlay flex flex-col h-full justify-end">
           <div className="winery-header">{winery.name}</div>
           <div className="winery-summary">{winery.summary}</div>
+          <div className="winery-link">
+            <a href={winery.link} target="_blank" rel="noopener noreferrer">Click to see their homepage in a new tab</a>
+          </div>
           <hr className="winery-divider" />
           <div className="winery-details">
             {winery.details.map((line, idx) => <p key={idx}>{line}</p>)}
