@@ -283,7 +283,7 @@ const Route = () => (
         rel="noopener noreferrer"
         className="underline font-semibold"
       >
-        Click here to open full interactive route in Google Maps because Google won't let me embed it on my website!!
+        Click here to open full interactive route in Google Maps!
       </a>
     </p>
     <p className="mt-1 text-xs text-gray-400">
@@ -291,16 +291,7 @@ const Route = () => (
     </p>
     {/* Static map centered on the region */}
     <div className="w-full flex justify-center mb-2">
-      <iframe
-        title="CT Wine Tour Area"
-        width="100%"
-        height="350"
-        style={{ border: 0, maxWidth: 600, minWidth: 300 }}
-        loading="lazy"
-        allowFullScreen
-        referrerPolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d949583.7128749064!2d-73.35!3d41.65!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDFuMzknMDIuMCJOIDczwrAyMCcwMC4wIlc!5e0!3m2!1sen!2sus!4v1715450000000!5m2!1sen!2sus"
-      ></iframe>
+      <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1gJnx0Fj_PGvovTaOzY4bRtZk-FNlmBE&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
     </div>
   </div>
 );
