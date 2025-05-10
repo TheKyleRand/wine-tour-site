@@ -234,17 +234,26 @@ const Locations = () => {
 };
 
 const Schedule = () => (
-  <div>
-    <h2 className="text-lg md:text-xl font-semibold mb-3">Schedule & Availability Info</h2>
-    <p className="mb-3">All wineries are open on weekends and some have weekday hours. Here are some things to keep in mind when picking a date:</p>
-    <ul className="list-disc pl-5 space-y-2">
-      <li><strong>Weekdays:</strong> Most wineries are closed on Tuesdays and/or Wednesdays. Very few open before 12 PM.</li>
-      <li><strong>Weekends:</strong> All wineries are open Saturday and Sunday, usually starting around 11 AM and closing by 6–9 PM.</li>
-      <li><strong>Evening Availability:</strong> Only a couple of wineries stay open past 6 PM (e.g., Aquila's Nest is open until 9 PM on weekends).</li>
-      <li><strong>Early mornings:</strong> No winery opens before 11 AM, so 3 AM or early morning plans won't work.</li>
-      <li><strong>Group visits:</strong> We do not need reservations for any of the stops included.</li>
-    </ul>
-    <p className="mt-3">So, we should aim for a full weekend day (Saturday or Sunday), starting around 11 AM and wrapping up before 9 PM. Let me know which weekends you're available within that window!</p>
+  <div className="mothersday-bg flex-1 flex flex-col justify-center items-center py-8 relative">
+    {/* Animated floating hearts */}
+    <div className="heart" />
+    <div className="heart" />
+    <div className="heart" />
+    <div className="heart" />
+    <div className="heart" />
+    {/* Schedule content */}
+    <div className="mothersday-content-box relative z-10 p-6 max-w-xl w-full">
+      <h2 className="text-lg md:text-xl font-semibold mb-3">Schedule & Availability Info</h2>
+      <p className="mb-3">All wineries are open on weekends and some have weekday hours. Here are some things to keep in mind when picking a date:</p>
+      <ul className="list-disc pl-5 space-y-2">
+        <li><strong>Weekdays:</strong> Most wineries are closed on Tuesdays and/or Wednesdays. Very few open before 12 PM.</li>
+        <li><strong>Weekends:</strong> All wineries are open Saturday and Sunday, usually starting around 11 AM and closing by 6–9 PM.</li>
+        <li><strong>Evening Availability:</strong> Only a couple of wineries stay open past 6 PM (e.g., Aquila's Nest is open until 9 PM on weekends).</li>
+        <li><strong>Early mornings:</strong> No winery opens before 11 AM, so 3 AM or early morning plans won't work.</li>
+        <li><strong>Group visits:</strong> We do not need reservations for any of the stops included.</li>
+      </ul>
+      <p className="mt-3">So, we should aim for a full weekend day (Saturday or Sunday), starting around 11 AM and wrapping up before 9 PM. Let me know which weekends you're available within that window!</p>
+    </div>
   </div>
 );
 

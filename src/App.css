@@ -15,6 +15,15 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+.mothersday-content-box{
+  color: black !important;
+  height: 100vh;
+  width: 100vw;
+  white-space: wrap;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -275,4 +284,75 @@
   line-height: 1.6;
   font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
   text-shadow: 0 1px 8px rgba(0,0,0,0.06);
+}
+
+/* Mother's Day Animated Background for Schedule Tab */
+.mothersday-bg {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #f3e7fa 0%, #e3e6ff 100%);
+  overflow: hidden;
+  animation: bg-mothersday-pan 18s linear infinite alternate;
+}
+
+@keyframes bg-mothersday-pan {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* Floating hearts animation - now soft purple */
+.mothersday-bg .heart {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: url('data:image/svg+xml;utf8,<svg fill="%23a78bfa" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M23.6 3.6c-2.6 0-4.9 1.7-5.6 4.1C16.3 5.3 14 3.6 11.4 3.6 7.3 3.6 4 7 4 11.1c0 7.1 11.1 15.3 11.6 15.7.2.1.5.2.7.2s.5-.1.7-.2C24.9 26.4 36 18.2 36 11.1c0-4.1-3.3-7.5-7.4-7.5z"/></svg>') no-repeat center/contain;
+  opacity: 0.7;
+  pointer-events: none;
+  animation: float-heart 8s linear infinite;
+}
+
+.mothersday-bg .heart:nth-child(1) {
+  left: 10%;
+  bottom: -40px;
+  animation-delay: 0s;
+  animation-duration: 9s;
+}
+.mothersday-bg .heart:nth-child(2) {
+  left: 30%;
+  bottom: -60px;
+  animation-delay: 2s;
+  animation-duration: 11s;
+}
+.mothersday-bg .heart:nth-child(3) {
+  left: 60%;
+  bottom: -50px;
+  animation-delay: 4s;
+  animation-duration: 10s;
+}
+.mothersday-bg .heart:nth-child(4) {
+  left: 80%;
+  bottom: -70px;
+  animation-delay: 1s;
+  animation-duration: 12s;
+}
+.mothersday-bg .heart:nth-child(5) {
+  left: 50%;
+  bottom: -30px;
+  animation-delay: 3s;
+  animation-duration: 13s;
+}
+
+@keyframes float-heart {
+  0% {
+    transform: translateY(0) scale(1) rotate(-10deg);
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-90vh) scale(1.2) rotate(10deg);
+    opacity: 0;
+  }
 }
