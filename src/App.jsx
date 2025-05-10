@@ -299,7 +299,7 @@ const Route = () => (
         loading="lazy"
         allowFullScreen
         referrerPolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d474191.8564374532!2d-73.312634!3d41.576211!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e7e7e7e7e7e7e7%3A0x0!2sWoodbury%2C%20CT!5e0!3m2!1sen!2sus!4v1715450000000!5m2!1sen!2sus"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d949583.7128749064!2d-73.35!3d41.65!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDFuMzknMDIuMCJOIDczwrAyMCcwMC4wIlc!5e0!3m2!1sen!2sus!4v1715450000000!5m2!1sen!2sus"
       ></iframe>
     </div>
   </div>
