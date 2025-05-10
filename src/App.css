@@ -1,8 +1,5 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
 }
 
 .logo {
@@ -41,13 +38,176 @@
   color: #888;
 }
 
+.splash-title {
+  color: purple;
+}
+.splash-subtitle {
+  color: gray;
+}
 .fixed-bottom-nav {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100vw;
   z-index: 50;
-  background: #fff;
-  border-top: 1px solid #e5e7eb;
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.03);
+  background: transparent;
+}
+
+
+.menuitems {
+  width: 33.33%;
+  border-radius: 0;
+}
+
+.winerybutton{
+  width: 100%
+}
+
+@keyframes pan-right {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+@keyframes pan-left {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes pan-down {
+  0% { background-position: 50% 0%; }
+  100% { background-position: 50% 100%; }
+}
+@keyframes pan-up {
+  0% { background-position: 50% 100%; }
+  100% { background-position: 50% 0%; }
+}
+
+.bg-pan-right {
+  animation: pan-right 18s linear infinite alternate;
+}
+.bg-pan-left {
+  animation: pan-left 18s linear infinite alternate;
+}
+.bg-pan-down {
+  animation: pan-down 18s linear infinite alternate;
+}
+.bg-pan-up {
+  animation: pan-up 18s linear infinite alternate;
+}
+
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  /* Soft purple-pink gradient background */
+  background: linear-gradient(135deg, #f3e7fa 0%, #e3e6ff 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.8s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.splash-fadeout {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.splash-content {
+  background: rgba(255,255,255,0.92);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(80, 0, 120, 0.12);
+  padding: 2.5rem 2rem 2rem 2rem;
+  text-align: center;
+  animation: splash-fadein 1.2s cubic-bezier(.4,0,.2,1);
+}
+
+@keyframes splash-fadein {
+  from { opacity: 0; transform: translateY(24px) scale(0.98);}
+  to   { opacity: 1; transform: translateY(0) scale(1);}
+}
+
+.sliderbro {}
+
+@keyframes bg-zoom-in {
+  from {
+    background-size: cover;
+  }
+  to {
+    background-size: 120%;
+  }
+}
+@keyframes bg-zoom-out {
+  from {
+    background-size: 120%;
+  }
+  to {
+    background-size: cover;
+  }
+}
+
+.bg-zoom-in {
+  animation: bg-zoom-in 18s ease-in-out infinite alternate;
+}
+.bg-zoom-out {
+  animation: bg-zoom-out 18s ease-in-out infinite alternate;
+}
+
+.bg-winery-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.72);
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1);
+  pointer-events: none;
+  user-select: none;
+}
+
+@keyframes img-pan-right {
+  from { transform: scale(1) translateX(0); }
+  to   { transform: scale(1.15) translateX(8%); }
+}
+@keyframes img-pan-left {
+  from { transform: scale(1) translateX(0); }
+  to   { transform: scale(1.15) translateX(-8%); }
+}
+@keyframes img-pan-down {
+  from { transform: scale(1) translateY(0); }
+  to   { transform: scale(1.15) translateY(8%); }
+}
+@keyframes img-pan-up {
+  from { transform: scale(1) translateY(0); }
+  to   { transform: scale(1.15) translateY(-8%); }
+}
+@keyframes img-zoom-in {
+  from { transform: scale(1); }
+  to   { transform: scale(1.18); }
+}
+@keyframes img-zoom-out {
+  from { transform: scale(1.18); }
+  to   { transform: scale(1); }
+}
+
+.img-pan-right {
+  animation: img-pan-right 18s linear infinite alternate;
+}
+.img-pan-left {
+  animation: img-pan-left 18s linear infinite alternate;
+}
+.img-pan-down {
+  animation: img-pan-down 18s linear infinite alternate;
+}
+.img-pan-up {
+  animation: img-pan-up 18s linear infinite alternate;
+}
+.img-zoom-in {
+  animation: img-zoom-in 18s ease-in-out infinite alternate;
+}
+.img-zoom-out {
+  animation: img-zoom-out 18s ease-in-out infinite alternate;
 }
