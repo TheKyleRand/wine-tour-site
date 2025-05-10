@@ -258,10 +258,10 @@ const Schedule = () => (
 );
 
 const Route = () => (
-  <div>
+  <div className="flex flex-col items-center">
     <h2 className="text-lg md:text-xl font-semibold mb-3">Driving Route</h2>
     <p className="mb-2">Our tour begins and ends in Woodbury, CT.</p>
-    <ol className="list-decimal pl-5 space-y-2">
+    <ol className="list-decimal pl-5 space-y-2 mb-4">
       <li>Start: Woodbury → Hawk Ridge Winery (Watertown)</li>
       <li>To: Sunset Meadow (Goshen)</li>
       <li>To: Hopkins Vineyard (Warren)</li>
@@ -269,7 +269,33 @@ const Route = () => (
       <li>To: Aquila's Nest (Newtown)</li>
       <li>Return to Woodbury</li>
     </ol>
-    <p className="mt-2 text-xs text-gray-500">Estimated total drive time: 3 hours (spread out).</p>
+    <p className="mt-2 text-xs text-gray-500 mb-4">Estimated total drive time: 3 hours (spread out).</p>
+    <p className="mt-2 text-xs text-gray-700">
+      <a
+        href="https://www.google.com/maps/dir/Woodbury,+CT/28+Plungis+Rd,+Watertown,+CT+06795/599+Old+Middle+St,+Goshen,+CT+06756/25+Hopkins+Rd,+New+Preston,+CT+06777/32+Route+37+East,+Sherman,+CT+06784/56+Pole+Bridge+Rd,+Newtown,+CT+06482/Woodbury,+CT"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline font-semibold"
+      >
+        Click here to open full interactive route in Google Maps because Google won't let me embed it on my website!!
+      </a>
+    </p>
+    <p className="mt-1 text-xs text-gray-400">
+      (The interactive route with all stops will open in a new tab.)
+    </p>
+    {/* Static map centered on the region */}
+    <div className="w-full flex justify-center mb-2">
+      <iframe
+        title="CT Wine Tour Area"
+        width="100%"
+        height="350"
+        style={{ border: 0, maxWidth: 600, minWidth: 300 }}
+        loading="lazy"
+        allowFullScreen
+        referrerPolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d474191.8564374532!2d-73.312634!3d41.576211!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e7e7e7e7e7e7e7%3A0x0!2sWoodbury%2C%20CT!5e0!3m2!1sen!2sus!4v1715450000000!5m2!1sen!2sus"
+      ></iframe>
+    </div>
   </div>
 );
 
