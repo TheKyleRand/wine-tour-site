@@ -201,10 +201,11 @@ const Locations = () => {
         style={{ zIndex: 10 }}
         {...swipeHandlers}
       >
-        <div className="p-4 flex flex-col h-full justify-end bg-white bg-opacity-90">
-          <div className="text-lg font-bold mb-1 text-purple-800 drop-shadow">{winery.name}</div>
-          <div className="text-sm text-gray-700 mb-2">{winery.summary}</div>
-          <div className="text-sm text-gray-700 space-y-2 mb-2">
+        <div className="winery-card-overlay flex flex-col h-full justify-end">
+          <div className="winery-header">{winery.name}</div>
+          <div className="winery-summary">{winery.summary}</div>
+          <hr className="winery-divider" />
+          <div className="winery-details">
             {winery.details.map((line, idx) => <p key={idx}>{line}</p>)}
           </div>
           <div className="flex justify-between mt-4">

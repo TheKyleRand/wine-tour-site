@@ -211,3 +211,68 @@
 .img-zoom-out {
   animation: img-zoom-out 18s ease-in-out infinite alternate;
 }
+
+/* Modern Winery Card Overlay */
+.winery-card-overlay {
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(5px) saturate(1.2);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(40, 40, 80, 0.10);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 540px;
+  width: 100%;
+  align-self: center;
+  box-sizing: border-box;
+  word-break: break-word;
+  color: white !important;
+}
+
+.winery-card-overlay > div, .winery-card-overlay p {
+  color: white !important;
+}
+
+@media (max-width: 600px) {
+  .winery-card-overlay {
+    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+    border-radius: 1rem;
+    max-width: 98vw;
+  }
+}
+
+/* Modern header styles */
+.winery-header {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #23272f;
+  margin-bottom: 0.2em;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  letter-spacing: -0.5px;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+.winery-summary {
+  font-size: 1.15rem;
+  color: #444;
+  font-weight: 400;
+  margin-bottom: 1em;
+  opacity: 0.92;
+  letter-spacing: 0.1px;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.07);
+}
+
+.winery-divider {
+  border: none;
+  border-top: 1.5px solid #e5e7eb;
+  margin: 0.5em 0 1em 0;
+  width: 36%;
+  opacity: 0.7;
+}
+
+.winery-details p {
+  margin-bottom: 0.5em;
+  color: #23272f;
+  font-size: 1.01rem;
+  line-height: 1.6;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.06);
+}
